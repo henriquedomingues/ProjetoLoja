@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cabecario {
+    background-color: rgba(11, 3, 104, 0.396);  
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+    padding-left: 20px;
+}
+
+.logo {
+    width: 100px
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.171);
+    padding: 4px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #5c5a5a;
+    transform: translateY(-2px);
+}
