@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 div > h1 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -34,9 +35,11 @@ div > p {
 }
 
 .compra {
+
     background-color: #00a650; 
     color: white;
     padding: 12px 24px;
+    margin-top: 30px;
     border: none;
     border-radius: 10px; 
     font-size: 16px;
@@ -50,11 +53,13 @@ div > p {
 }
 
 .adicionar {
-    border-color: #00a650;
+    background-color: #00cc5828;
+    border-color: transparent;
     padding: 12px 24px;
     border-radius: 10px; 
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: #01873b;
 }
