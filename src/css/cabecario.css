@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.titulo {
+    width: 110px
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cabecario {
+    background-color: rgba(11, 3, 104, 0.396);  
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+    padding-left: 20px;
+}
+
+.logo {
+    width: 100px
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.171);
+    padding: 4px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #5c5a5a;
+    transform: translateY(-2px);
+}
+
+
+/* CSS DO FOOTER */
+
+.footer {
+    background-color: rgba(11, 3, 104, 0.396);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding-top: 20px;
+    margin-top: 150px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 15px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-text span {
+    color: #2544B8;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    background-color: rgba(11, 3, 104, 0.396);
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    border-top: 1px solid #222;
+}

@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebook Alimento</title>
-    <link rel="stylesheet" href="../cabecario.css">
-    <link rel="stylesheet" href="../produto.css">
+    <link rel="stylesheet" href="../css/cabecario.css">
+    <link rel="stylesheet" href="../css/produto.css">  
+    <script src="script.js" defer></script> 
+
+
 </head>
+
 <body>
     <header class="cabecario">
         <div class="container">
@@ -23,6 +27,7 @@
     <main class="produto-container">
         <div class="image_produto">
             <img src="../img_produtos/imagem-manual-de-paes-caseiros.jpg" alt="Imagem Ebook">
+            <span><p class="valor">R$ 9.99</p></span>
         </div>
         
         
@@ -34,14 +39,50 @@
             O Governo do Estado de São Paulo trabalha na direção de oferecer conhecimentos à população com o intuito de zelar pela saúde pública. Dentre os serviços com qualidade prestados, proporcionar fácil acesso às informações é dos mais abrangentes e eficientes instrumentos de educação e conscientização das pessoas.</p>
 
             <button class="compra">Comprar agora</button>
-            <button class="adicionar">Adionar no carrinho</button>
+            <button 
+                class="add-carrinho" 
+                data-nome="Manual de Pães"
+                data-preco="9.99"
+                data-img="../img_produtos/imagem-manual-de-paes-caseiros.jpg"
+            >
+                Adicionar ao carrinho
+            </button>
+            <!--<button class="adicionar">Adionar no carrinho</button> -->
         </div>
 
         
 
     </main>
 
-</body>
+    <footer class="footer">
+        <div class="footer-container">
+    
+            <!-- Logo e descrição -->
+            <div class="footer-section about">
+                <h2 class="logo-text"><Span>eRead</Span></h2>
+                <p>Sua loja online de confiança. Oferecemos os melhores produtos online com qualidade e preços imbatíveis.
+                </p>
+            </div>
+    
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> eRead - Todos os direitos reservados | Feito por <strong>Henrique Sarah Julia
+                    Octavio</strong> </p>
+        </div>
+    </footer>
+
+    <div id="sidebar-carrinho" class="sidebar-carrinho">
+        <h2>Carrinho</h2>
+        <button id="fechar-carrinho" style="float:right;font-size:22px;background:none;border:none;cursor:pointer;">&times;</button>
+        <div id="itens-carrinho"></div>
+        <div id="total-carrinho"></div>
+        <button id="comprar-btn">Comprar</button>
+        <button id="ver-carrinho-btn">Ver carrinho completo</button>
+    </div>
+
+
+</body> 
 </html>
 
 

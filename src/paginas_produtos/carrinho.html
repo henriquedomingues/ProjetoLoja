@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho Completo</title>
+    <link rel="shortcut icon" href="img/logoMascote.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/cabecario.css">
+
+</head>
+<body>
+    <header class="cabecario">
+        <div class="container">
+            <img class="logo" src="../img_produtos/logoMascote.png" alt="Logo eRead">
+            
+        </div>
+        <nav class="nav">
+                <a href="../index.html">Início</a>
+                <a href="#">Ebooks</a>
+                <a href="#">Lançamentos</a>
+        </nav>
+    </header>
+
+    
+    <h1>Seu Carrinho</h1>
+    <div id="carrinho-completo"></div>
+    <script>
+        function renderCarrinho() {
+            const carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
+            let total = 0;
+            let html = '';
+            carrinho.forEach(item => {
+                total += item.preco * item.qtd;
+                html += `
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                        <img src="${item.img}" alt="${item.nome}" style="width:60px;height:auto;">
+                        <div>
+                            ${item.nome} - R$${item.preco.toFixed(2)} x ${item.qtd}
+                        </div>
+                    </div>
+                `;
+            });
+            html += `<hr><strong>Total: R$${total.toFixed(2)}</strong>`;
+            document.getElementById('carrinho-completo').innerHTML = html;
+        }
+
+        // Atualiza ao carregar a página
+        renderCarrinho();
+
+        // Atualiza automaticamente se o carrinho mudar em outra aba
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'carrinho') {
+                renderCarrinho();
+            }
+        });
+    </script>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+    
+            <!-- Logo e descrição -->
+            <div class="footer-section about">
+                <h2 class="logo-text"><Span>eRead</Span></h2>
+                <p>Sua loja online de confiança. Oferecemos os melhores produtos online com qualidade e preços imbatíveis.
+                </p>
+            </div>
+    
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> eRead - Todos os direitos reservados | Feito por <strong>Henrique Sarah Julia
+                    Octavio</strong> </p>
+        </div>
+    </footer>
+
+</body>
+</html>

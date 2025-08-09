@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebook Alimento</title>
-    <link rel="stylesheet" href="../cabecario.css">
-    <link rel="stylesheet" href="../produto.css">
+    <link rel="stylesheet" href="../css/cabecario.css">
+    <link rel="stylesheet" href="../css/produto.css">
+    <script src="script.js" defer></script> 
 </head>
 <body>
     <header class="cabecario">
@@ -23,25 +24,60 @@
     <main class="produto-container">
         <div class="image_produto">
             <img src="../img_produtos/de sangue e cinzas.jpg" alt="Imagem Ebook">
+            <span><p class="valor">R$ 29.90</p></span>
+            
         </div>
-        
+              
         
         <div class="texto">
             <h1>De Sangue e Cinzas</h1>
             <p>Prestes a completar 19 anos, Poppy se prepara para sua Ascensão. Quer dizer, Poppy é preparada para sua Ascensão, já que, como tudo mais em sua vida, ela não tem opção senão Ascender. Sendo a Donzela, ela será entregue aos deuses de qualquer forma, seja lá o que isso signifique.
+            <br><br>
 
-Destinada a salvar Solis dos Atlantes, que amaldiçoaram o reino com a criação dos terríveis Vorazes, Poppy não entende o que está por vir e nem sabe se está pronta para ser entregue aos tais deuses ou, ainda, se sequer deseja fazê-lo.
-
-Privada de todas as escolhas, sendo inclusive obrigada a cobrir o rosto com um véu e impedida de conversar com qualquer pessoa além de uma dama de companhia designada pela Corte, Poppy leva uma vida solitária. Mas o que ela quer mesmo é lutar ao lado dos guardas e conseguir se proteger das criaturas que ameaçam o reino, as mesmas que mataram seus pais. Com um aliado secreto e uma habilidade rara, Poppy tem um vislumbre da vida que poderia ter se fosse livre do fardo de ser a Donzela.
-
-Mas com a entrada de Hawke Flynn em sua vida, o mundo de Poppy vira de cabeça para baixo e ela corre o risco de ser arrebatada por tudo o que sempre lhe disseram ser proibido. Lançada em uma intrincada rede de mentiras, traições e desejo, ela vê todas as suas certezas começarem a ruir. Qual será o lado certo da história? E será que há mesmo um lado certo? Em meio a tantas reviravoltas e dilemas, o futuro de Poppy está cada vez mais incerto e perigoso, e a vida de dois reinos está em suas mãos.</p>
+            Destinada a salvar Solis dos Atlantes, que amaldiçoaram o reino com a criação dos terríveis Vorazes, Poppy não entende o que está por vir e nem sabe se está pronta para ser entregue aos tais deuses ou, ainda, se sequer deseja fazê-lo.
+            <br><br>
+            Privada de todas as escolhas, sendo inclusive obrigada a cobrir o rosto com um véu e impedida de conversar com qualquer pessoa além de uma dama de companhia designada pela Corte, Poppy leva uma vida solitária. Mas o que ela quer mesmo é lutar ao lado dos guardas e conseguir se proteger das criaturas que ameaçam o reino, as mesmas que mataram seus pais. Com um aliado secreto e uma habilidade rara, Poppy tem um vislumbre da vida que poderia ter se fosse livre do fardo de ser a Donzela.</p>
             <button class="compra">Comprar agora</button>
-            <button class="adicionar">Adionar no carrinho</button>
+            <button 
+                class="add-carrinho" 
+                data-nome="De Sangue e Cinzas"
+                data-preco="29.90"
+                data-img="../img_produtos/de sangue e cinzas.jpg"
+            >
+                Adicionar ao carrinho
+            </button>
         </div>
 
         
 
     </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+    
+            <!-- Logo e descrição -->
+            <div class="footer-section about">
+                <h2 class="logo-text"><Span>eRead</Span></h2>
+                <p>Sua loja online de confiança. Oferecemos os melhores produtos online com qualidade e preços imbatíveis.
+                </p>
+            </div>
+    
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> eRead - Todos os direitos reservados | Feito por <strong>Henrique Sarah Julia
+                    Octavio</strong> </p>
+        </div>
+    </footer>
+
+    <div id="sidebar-carrinho" class="sidebar-carrinho">
+        <h2>Carrinho</h2>
+        <button id="fechar-carrinho" style="float:right;font-size:22px;background:none;border:none;cursor:pointer;">&times;</button>
+        <div id="itens-carrinho"></div>
+        <div id="total-carrinho"></div>
+        <button id="comprar-btn">Comprar</button>
+        <button id="ver-carrinho-btn">Ver carrinho completo</button>
+    </div>
 
 </body>
 </html>
