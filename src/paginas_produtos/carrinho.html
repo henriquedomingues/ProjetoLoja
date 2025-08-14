@@ -5,7 +5,7 @@
     <title>Carrinho Completo</title>
     <link rel="shortcut icon" href="img/logoMascote.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/cabecario.css">
-
+    <link rel="stylesheet" href="../css/carrinho_pagina.css">
 </head>
 <body>
     <header class="cabecario">
@@ -20,8 +20,7 @@
         </nav>
     </header>
 
-    
-    <h1>Seu Carrinho</h1>
+
     <div id="carrinho-completo"></div>
     <script>
         function renderCarrinho() {
@@ -31,7 +30,9 @@
             carrinho.forEach(item => {
                 total += item.preco * item.qtd;
                 html += `
+                    <h1>Seu Carrinho</h1>
                     <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                        
                         <img src="${item.img}" alt="${item.nome}" style="width:60px;height:auto;">
                         <div>
                             ${item.nome} - R$${item.preco.toFixed(2)} x ${item.qtd}
@@ -64,6 +65,7 @@
                 <p>Sua loja online de confiança. Oferecemos os melhores produtos online com qualidade e preços imbatíveis.
                 </p>
             </div>
+        
     
         </div>
     
@@ -72,6 +74,5 @@
                     Octavio</strong> </p>
         </div>
     </footer>
-
 </body>
 </html>
