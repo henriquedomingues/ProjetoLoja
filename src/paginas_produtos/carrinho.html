@@ -10,17 +10,18 @@
 <body>
     <header class="cabecario">
         <div class="container">
-            <img class="logo" src="../img_produtos/logoMascote.png" alt="Logo eRead">
+            <img class="logo" src="../img_produtos/Design_sem_nome__2_-removebg-preview.png" alt="Logo eRead">
+            <img  class="titulo" src="../img_produtos/eread-removebg-preview.png" alt="">
             
         </div>
         <nav class="nav">
                 <a href="../index.html">Início</a>
-                <a href="#">Ebooks</a>
-                <a href="#">Lançamentos</a>
+                <a href="../index.html">Ebooks</a>
+                <a href="../paginas_produtos/laçamentos.html">Lançamentos</a>
         </nav>
     </header>
 
-
+    <h1>Seu Carrinho</h1>
     <div id="carrinho-completo"></div>
     <script>
         function renderCarrinho() {
@@ -30,10 +31,9 @@
             carrinho.forEach(item => {
                 total += item.preco * item.qtd;
                 html += `
-                    <h1>Seu Carrinho</h1>
                     <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
                         
-                        <img src="${item.img}" alt="${item.nome}" style="width:60px;height:auto;">
+                        <img src="${item.img}" alt="${item.nome}" style="padding:10px;width:100px;height:auto;">
                         <div>
                             ${item.nome} - R$${item.preco.toFixed(2)} x ${item.qtd}
                         </div>

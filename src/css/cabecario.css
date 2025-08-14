@@ -20,6 +20,19 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.div-lancamento {
+
+    display: block;
+    margin: auto;
+}
+
+.h1-lancamento{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    color: #2544B8;
+    padding-top: 20px;
+}
+
 .container {
     max-width: 1200px;
     padding-left: 20px;
