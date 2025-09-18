@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login ADM - eREAD</title>
-    <link rel="stylesheet" href="../css-adm/form-adm.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form-adm.css') }}">
+
 </head>
 <body>
 
@@ -12,15 +13,15 @@
      <img src="../img_produtos/logoMascote.png" alt="Logo" class="logo">
       <h2 class="titulo">Login Administrativo</h2>
 
-     <form action="">
+     <form action="/login" method="post">
       <div class="input-group">
-        <label for="iduser">Usuário</label>
-        <input type="text" name="user" id="iduser" placeholder="Digite seu usuário">
+        <label for="username">Usuário</label>
+        <input type="text" name="username" id="username" placeholder="Digite seu usuário">
       </div>
 
       <div class="input-group">
-        <label for="idsenha">Senha</label>
-        <input type="password" name="senha" id="idsenha" placeholder="Digite sua senha">
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" placeholder="Digite sua senha">
       </div>
 
         <button type="submit" class="btn">Entrar</button>
